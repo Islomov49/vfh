@@ -7,15 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.eng.iso.sharipova.Entity.Lesson;
 import com.eng.iso.sharipova.Fragments.ExersiceFragment;
 import com.eng.iso.sharipova.MainActivity;
 import com.eng.iso.sharipova.R;
 import com.eng.iso.sharipova.Utils.AnimUtil;
-import com.eng.iso.sharipova.Utils.ExersiceTypes;
-import com.eng.iso.sharipova.Utils.StringUtils;
+import com.eng.iso.sharipova.Utils.ExerciseTypes;
 
 import java.util.ArrayList;
 
@@ -50,7 +48,7 @@ public class LessonListAdapter extends RecyclerView.Adapter<LessonListAdapter.Vi
                     public void onAnimoationEnd() {
                         ExersiceFragment fragment = new ExersiceFragment();
                         Bundle bundle =new Bundle();
-                        bundle.putInt(ExersiceTypes.EXERSICE_TYPE,position);
+                        bundle.putInt(ExerciseTypes.EXERSICE_TYPE,position);
                         fragment.setArguments(bundle);
                         ((MainActivity) context).getSupportFragmentManager().beginTransaction().add(R.id.mainFragment, fragment).addToBackStack(null).commit();
                     }
