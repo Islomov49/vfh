@@ -46,7 +46,7 @@ public class ExersiceListAdapter extends RecyclerView.Adapter<ExersiceListAdapte
                     @Override
                     public void onAnimoationEnd() {
 //                        ((MainActivity) context).getSupportFragmentManager().beginTransaction().add()
-                        Toast.makeText(context, ((ExerciseUnderline)exercises.get(position)).getTitle() + " --- " +((ExerciseUnderline)exercises.get(position)).getWords().size(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, exercises.get(position).toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
             }
