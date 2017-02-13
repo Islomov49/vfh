@@ -48,7 +48,7 @@ public class LessonListAdapter extends RecyclerView.Adapter<LessonListAdapter.Vi
                     public void onAnimoationEnd() {
                         ExersiceFragment fragment = new ExersiceFragment();
                         Bundle bundle =new Bundle();
-                        bundle.putInt(ExerciseTypes.EXERSICE_TYPE,position);
+                        bundle.putInt(ExerciseTypes.LESSON_NUMBER,position);
                         fragment.setArguments(bundle);
                         ((MainActivity) context).getSupportFragmentManager().beginTransaction().add(R.id.mainFragment, fragment).addToBackStack(null).commit();
                     }

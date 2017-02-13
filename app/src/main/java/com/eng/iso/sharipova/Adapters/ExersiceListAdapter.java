@@ -1,18 +1,19 @@
 package com.eng.iso.sharipova.Adapters;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.eng.iso.sharipova.Entity.Exercise;
-import com.eng.iso.sharipova.Entity.ExerciseUnderline;
-import com.eng.iso.sharipova.Entity.Lesson;
+import com.eng.iso.sharipova.Fragments.ExerciseTabLayout;
+import com.eng.iso.sharipova.MainActivity;
 import com.eng.iso.sharipova.R;
 import com.eng.iso.sharipova.Utils.AnimUtil;
+import com.eng.iso.sharipova.Utils.ExerciseTypes;
 
 import java.util.ArrayList;
 
@@ -23,9 +24,11 @@ import java.util.ArrayList;
 public class ExersiceListAdapter extends RecyclerView.Adapter<ExersiceListAdapter.ViewHolder> {
     ArrayList<Exercise> exercises;
     Context context;
-    public ExersiceListAdapter(ArrayList<Exercise> exercises, Context context){
+    int lessonNumber = 0;
+    public ExersiceListAdapter(ArrayList<Exercise> exercises, Context context, int lessonNumber){
         this.exercises = exercises;
         this.context = context;
+        this.lessonNumber = lessonNumber;
     }
 
     @Override
@@ -45,8 +48,13 @@ public class ExersiceListAdapter extends RecyclerView.Adapter<ExersiceListAdapte
                 AnimUtil.buttonClickCustomAnimation(0.98f,holder.mainView, new AnimUtil.AfterAnimationEnd() {
                     @Override
                     public void onAnimoationEnd() {
-//                        ((MainActivity) context).getSupportFragmentManager().beginTransaction().add()
-                        Toast.makeText(context, exercises.get(position).toString(), Toast.LENGTH_SHORT).show();
+                        ExerciseTabLayout fragment = new ExerciseTabLayout();
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("COUNT_KEY",position);
+                        bundle.putInt(ExerciseTypes.LESSON_NUMBER,lessonNumber);
+                        fragment.setArguments(bundle);
+                        ((MainActivity) context).getSupportFragmentManager().beginTransaction().add(R.id.mainFragment, fragment).addToBackStack(null).commit();
+//                        Toast.makeText(context, exercises.get(position).toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
             }

@@ -5,7 +5,7 @@ package com.eng.iso.sharipova.Utils;
  */
 
 public class ExerciseTypes {
-    public static final String EXERSICE_TYPE = "exersicetype";
+    public static final String LESSON_NUMBER = "exersicetype";
     public static final int UNDERLINE_EX = 1;
     public static final int QUESTION_EX = 2;
     public static final int PIC_PICK_EX = 3;
