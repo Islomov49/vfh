@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.UnderlineExerciseFragment;
 import com.eng.iso.sharipova.R;
 import com.eng.iso.sharipova.Utils.ExerciseTypes;
 
@@ -53,7 +54,12 @@ public class ExerciseTabLayout extends Fragment implements View.OnClickListener,
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         list = new ArrayList<>();
 
-        list.add(new LessonFragment());
+        UnderlineExerciseFragment object = new UnderlineExerciseFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt(ExerciseTypes.LESSON_NUMBER,lessonNumber);
+        bundle.putInt(ExerciseTypes.COUNT_KEY,countCurrent);
+        object.setArguments(bundle);
+        list.add(object);
         list.add(new LessonFragment());
         list.add(new LessonFragment());
         list.add(new LessonFragment());

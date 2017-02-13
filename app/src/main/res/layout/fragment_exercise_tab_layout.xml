@@ -9,7 +9,7 @@
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/sliding_tabs"
+        android:layout_below="@+id/lienee"
         android:background="@android:color/white" />
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fbDebtBorrowFragment"
@@ -28,13 +28,18 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="#fff"
-        android:elevation="1dp"
-        android:translationZ="5dp"
+        android:background="#ece4fa"
+
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/colorAccent"
         app:tabMaxWidth="0dp"
         app:tabMode="scrollable"
         app:tabTextAppearance="@style/MineCustomTabText"
         />
+    <FrameLayout
+        android:id="@+id/lienee"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/sliding_tabs"
+        android:background="@color/lines"/>
 </RelativeLayout>

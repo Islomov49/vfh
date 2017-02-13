@@ -6,6 +6,7 @@ package com.eng.iso.sharipova.Utils;
 
 public class ExerciseTypes {
     public static final String LESSON_NUMBER = "exersicetype";
+    public static final String COUNT_KEY = "COUNT_KEY";
     public static final int UNDERLINE_EX = 1;
     public static final int QUESTION_EX = 2;
     public static final int PIC_PICK_EX = 3;
