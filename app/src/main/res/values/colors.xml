@@ -3,6 +3,8 @@
     <color name="colorPrimary">#673ab7</color>
     <color name="colorPrimaryDark">#512da8</color>
     <color name="colorAccent">#2e9450</color>
+    <color name="selected_green">#6dca8c</color>
+    <color name="selected_red">#c26e73</color>
 
 
     <color name="green">#c8e6c9</color>
@@ -10,6 +12,7 @@
     <color name="blackboldtext">#39464b</color>
     <color name="glavniy_black">#212121</color>
     <color name="lines">#d2d2d2</color>
+
 
 
 
