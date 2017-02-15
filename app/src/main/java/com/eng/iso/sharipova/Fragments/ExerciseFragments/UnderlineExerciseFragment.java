@@ -29,6 +29,7 @@ public class UnderlineExerciseFragment extends Fragment {
     ArrayList<IntervalsTwoPair> intervalsTwoPairs;
     String keywords;
     ArrayList<IntervalsTwoPair> switchedInterval;
+    ArrayList<IntervalsTwoPair> wordsPosition;
     public UnderlineExerciseFragment() {
         // Required empty public constructor
     }
@@ -45,6 +46,7 @@ public class UnderlineExerciseFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_underline_exercise, container, false);
         intervalsTwoPairs = new ArrayList<>();
         switchedInterval = new ArrayList<>();
+        wordsPosition = new ArrayList<>();
          content = (TextView) view.findViewById(R.id.textContent);
         tvContition = (TextView) view.findViewById(R.id.tvContition);
         tvKeyWords = (TextView) view.findViewById(R.id.textView);
@@ -57,20 +59,53 @@ public class UnderlineExerciseFragment extends Fragment {
         tvContition.setText(exerciseUnderline.getCondition());
         tvTitle.setText(exerciseUnderline.getTitle());
          keywords = "";
-        for (String s:exerciseUnderline.getWords()){
-            keywords = keywords+s + ", ";
+        String text = exerciseUnderline.getText();
+        String orgin = "";
+        for (String word:exerciseUnderline.getWords()){
+           orgin = word;
+            while (true) {
+                if(!word.isEmpty()){
+                    if (word.charAt(0) == ' ')
+                        word = word.substring(1, word.length());
+                    else break;
+                }
+                else break;
+            }
+
+            if(word.startsWith("to")&&word.charAt(2)==' '){
+                word = word.substring(2,word.length());
+            }
+            if(word.startsWith("a")&&word.charAt(1)==' '){
+                word = word.substring(1,word.length());
+            }
+            if(word.startsWith("an")&&word.charAt(2)==' '){
+                word = word.substring(2,word.length());
+            }
+
+            if(text.contains(word)){
+                int start = 0;
+                while (text.indexOf(word,start)!=-1&&!word.isEmpty()){
+                    wordsPosition.add(new IntervalsTwoPair(text.indexOf(word,start),text.indexOf(word,start)+word.length(),orgin));
+                    start = text.indexOf(word,start)+word.length();
+
+                }
+                if (!word.isEmpty())
+                keywords = keywords+orgin + ", ";
+            }
+
         }
         tvKeyWords.setText(keywords);
         content.setText(exerciseUnderline.getText());
+
+
+
+
         content.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN){
-                    Log.d("touchtest", "onTouch: "+event.getX() + " --- " + event.getY());
-                    Log.d("touchtest", "onTouch: "+exerciseUnderline.getText().charAt(content.getOffsetForPosition(event.getX(),event.getY()))) ;
 
                     String str =exerciseUnderline.getText();
-                    String sub ="";
                     boolean keyBegin = false;
                     boolean keyEnd = false;
                     int cursorEnd = content.getOffsetForPosition(event.getX(),event.getY());
@@ -83,11 +118,11 @@ public class UnderlineExerciseFragment extends Fragment {
                             cursorEnd ++;
                             while (true){
                                 if(cursorEnd<=lenghtt){
-                                     if (cursorEnd==lenghtt){
-                                         keyEnd = true;
-                                         break;
-                                     }
-                                     else if((str.charAt(cursorEnd))==' '||(str.charAt(cursorEnd))==':'||(str.charAt(cursorEnd))=='"'||(str.charAt(cursorEnd))==')'||(str.charAt(cursorEnd))=='('){
+                                    if (cursorEnd==lenghtt){
+                                        keyEnd = true;
+                                        break;
+                                    }
+                                    else if((str.charAt(cursorEnd))==' '||(str.charAt(cursorEnd))==':'||(str.charAt(cursorEnd))=='"'||(str.charAt(cursorEnd))==')'||(str.charAt(cursorEnd))=='('){
                                         keyEnd = true;
                                         break;
                                     }
@@ -104,6 +139,7 @@ public class UnderlineExerciseFragment extends Fragment {
                                     cursor = 0;
                                     break;
                                 }
+                                if(cursor<lenghtt)
                                 if((str.charAt(cursor))==' '||(str.charAt(cursor))==':'||(str.charAt(cursor))=='"'||(str.charAt(cursor))==')'||(str.charAt(cursor))=='('){
                                     keyBegin = true;
                                     break;
@@ -112,25 +148,23 @@ public class UnderlineExerciseFragment extends Fragment {
                             }
                         }
                     }
+
+
+
+
+
                     IntervalsTwoPair incorrect  = new IntervalsTwoPair(cursor+1,cursorEnd);
-                    String subs = exerciseUnderline.getText().substring(cursor+1,cursorEnd);
-                    for(String keyword:exerciseUnderline.getWords()){
-                        while (true) {
-                            if(!keyword.isEmpty()){
-                            if (keyword.charAt(0) == ' ')
-                                keyword = keyword.substring(1, keyword.length());
-                            else break;
-                            }
-                            else break;
-                        }
-                        //TODO popravit dlya pervogo elementa electronic machines
-                        if(keyword.contains(subs)&&!subs.equals("to")&&!subs.equals("a")&&!subs.equals("an")&&!subs.equals("in")&&((keywords.charAt(keywords.indexOf(subs)+subs.length()+1)==','||keywords.charAt(keywords.indexOf(subs)+subs.length()+1)==' ')&&keywords.charAt(keywords.indexOf(subs)-1)==' ')){
-                            switchedInterval.add(new IntervalsTwoPair(keywords.indexOf(keyword),keywords.indexOf(keyword)+keyword.length()));
-                            intervalsTwoPairs.add(new IntervalsTwoPair(cursor+1,cursorEnd));
+
+                    int cursorik = content.getOffsetForPosition(event.getX(),event.getY());
+
+                    for (IntervalsTwoPair intervalsTwoPair:wordsPosition){
+                        if (cursorik<=intervalsTwoPair.getEndPosition()&&cursorik>=intervalsTwoPair.getStartPosition()){
+                            switchedInterval.add(new IntervalsTwoPair(keywords.indexOf(intervalsTwoPair.getWord()),keywords.indexOf(intervalsTwoPair.getWord())+intervalsTwoPair.getWord().length()));
+                            intervalsTwoPairs.add(new IntervalsTwoPair(intervalsTwoPair.getStartPosition(),intervalsTwoPair.getEndPosition()));
                             incorrect = null;
-                            break;
                         }
                     }
+
                     if (switchedInterval !=null){
                         TextUtils.ColorFillWords(switchedInterval,keywords,tvKeyWords,null,getContext());
                     }

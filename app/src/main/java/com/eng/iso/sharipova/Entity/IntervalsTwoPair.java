@@ -7,10 +7,24 @@ package com.eng.iso.sharipova.Entity;
 public class IntervalsTwoPair {
     int startPosition;
     int endPosition;
-
+    String word;
     public IntervalsTwoPair(int startPosition, int endPosition) {
         this.startPosition = startPosition;
         this.endPosition = endPosition;
+    }
+
+    public IntervalsTwoPair(int startPosition, int endPosition, String word) {
+        this.startPosition = startPosition;
+        this.endPosition = endPosition;
+        this.word = word;
+    }
+
+    public String getWord() {
+        return word;
+    }
+
+    public void setWord(String word) {
+        this.word = word;
     }
 
     public int getStartPosition() {
