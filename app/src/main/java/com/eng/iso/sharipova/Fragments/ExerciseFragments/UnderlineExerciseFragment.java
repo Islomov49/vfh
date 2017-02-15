@@ -84,9 +84,9 @@ public class UnderlineExerciseFragment extends Fragment {
 
             if(text.contains(word)){
                 int start = 0;
-                while (text.indexOf(word,start)!=-1&&!word.isEmpty()){
-                    wordsPosition.add(new IntervalsTwoPair(text.indexOf(word,start),text.indexOf(word,start)+word.length(),orgin));
-                    start = text.indexOf(word,start)+word.length();
+                while (text.toUpperCase().indexOf(word.toUpperCase(),start)!=-1&&!word.isEmpty()){
+                    wordsPosition.add(new IntervalsTwoPair(text.toUpperCase().indexOf(word.toUpperCase(),start),text.toUpperCase().indexOf(word.toUpperCase(),start)+word.length(),orgin));
+                    start = text.toUpperCase().indexOf(word.toUpperCase(),start)+word.length();
 
                 }
                 if (!word.isEmpty())
