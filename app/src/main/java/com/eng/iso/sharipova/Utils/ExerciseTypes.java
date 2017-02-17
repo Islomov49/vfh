@@ -9,7 +9,7 @@ public class ExerciseTypes {
     public static final String COUNT_KEY = "COUNT_KEY";
     public static final int UNDERLINE_EX = 1; //
     public static final int QUESTION_EX = 2; //
-    public static final int PIC_PICK_EX = 3;
+    public static final int PIC_PICK_EX = 3; //
     public static final int COM_PIC_PICK_FILL_GAP_EX = 4;
     public static final int FILL_GAP_EX = 5;
     public static final int RERANGE_EX = 6;

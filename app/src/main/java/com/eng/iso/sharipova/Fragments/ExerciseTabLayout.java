@@ -12,12 +12,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.eng.iso.sharipova.Entity.Exercise;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.ComWordsFillWriteFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.PickPicFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.QuestionAnswerFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.UnderlineExerciseFragment;
 import com.eng.iso.sharipova.R;
+import com.eng.iso.sharipova.Utils.ExerciseManager;
 import com.eng.iso.sharipova.Utils.ExerciseTypes;
 
 import java.util.ArrayList;
+
+import static com.eng.iso.sharipova.Utils.ExerciseTypes.*;
 
 
 public class ExerciseTabLayout extends Fragment implements View.OnClickListener, ViewPager.OnPageChangeListener {
@@ -28,6 +34,8 @@ public class ExerciseTabLayout extends Fragment implements View.OnClickListener,
     private ArrayList<Fragment> list;
     int countCurrent = 0;
     int lessonNumber = 0;
+    ArrayList<Exercise> exercises;
+    Exercise exercise;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +49,8 @@ public class ExerciseTabLayout extends Fragment implements View.OnClickListener,
         if(getArguments()!=null){
             countCurrent = getArguments().getInt("COUNT_KEY");
             lessonNumber = getArguments().getInt(ExerciseTypes.LESSON_NUMBER);
+            exercises = ExerciseManager.fillData(getArguments().getInt(ExerciseTypes.LESSON_NUMBER));
+
         }
 
         tabLayout = (TabLayout) view.findViewById(R.id.sliding_tabs);
@@ -57,25 +67,10 @@ public class ExerciseTabLayout extends Fragment implements View.OnClickListener,
 
 
 
-        UnderlineExerciseFragment object = new UnderlineExerciseFragment();
-        Bundle bundle = new Bundle();
-        bundle.putInt(ExerciseTypes.LESSON_NUMBER,lessonNumber);
-        bundle.putInt(ExerciseTypes.COUNT_KEY,0);
-        object.setArguments(bundle);
-        list.add(object);
-        QuestionAnswerFragment questionAnswerFragment = new QuestionAnswerFragment();
-        Bundle bundle2 = new Bundle();
-        bundle2.putInt(ExerciseTypes.LESSON_NUMBER,lessonNumber);
-        bundle2.putInt(ExerciseTypes.COUNT_KEY,1);
-        questionAnswerFragment.setArguments(bundle2);
-        list.add(questionAnswerFragment);
-        list.add(new LessonFragment());
-        list.add(new LessonFragment());
-        list.add(new LessonFragment());
-        list.add(new LessonFragment());
-        list.add(new LessonFragment());
-        list.add(new LessonFragment());
-        list.add(new LessonFragment());
+        for(int i = 0 ;i<exercises.size();i++){
+            list.add(getNeededFragment(lessonNumber,i));
+        }
+
 
         adapter = new PagerAdapter(getActivity().getSupportFragmentManager(), list);
         viewPager.setAdapter(adapter);
@@ -134,6 +129,34 @@ public class ExerciseTabLayout extends Fragment implements View.OnClickListener,
 
     }
 
+    public Fragment getNeededFragment(int lessonNumber, int exerciseCount){
+        Fragment fragment = null;
+        exercise =  exercises.get(exerciseCount);
+        switch (exercise.getType()){
+            case UNDERLINE_EX:
+                fragment = new UnderlineExerciseFragment();
+                break;
+            case QUESTION_EX:
+                fragment = new QuestionAnswerFragment();
+                break;
+            case PIC_PICK_EX:
+                fragment = new PickPicFragment();
+                break;
+            case COM_PIC_PICK_FILL_GAP_EX:
+                fragment = new ComWordsFillWriteFragment();
+                break;
+            default: fragment = new LessonFragment();
+
+
+
+        }
+        Bundle bundle = new Bundle();
+        bundle.putInt(ExerciseTypes.LESSON_NUMBER,lessonNumber);
+        bundle.putInt(ExerciseTypes.COUNT_KEY,exerciseCount);
+        fragment.setArguments(bundle);
+        return fragment;
+
+    }
     public class PagerAdapter extends FragmentStatePagerAdapter {
         private ArrayList<Fragment> list;
         public PagerAdapter(FragmentManager fm, ArrayList<Fragment> list) {
