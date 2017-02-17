@@ -14,8 +14,11 @@ import android.view.ViewGroup;
 
 import com.eng.iso.sharipova.Entity.Exercise;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.ComWordsFillWriteFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.FillGapsFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.FillTextWordsFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.PickPicFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.QuestionAnswerFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.RerangeFragement;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.UnderlineExerciseFragment;
 import com.eng.iso.sharipova.R;
 import com.eng.iso.sharipova.Utils.ExerciseManager;
@@ -145,6 +148,16 @@ public class ExerciseTabLayout extends Fragment implements View.OnClickListener,
             case COM_PIC_PICK_FILL_GAP_EX:
                 fragment = new ComWordsFillWriteFragment();
                 break;
+            case FILL_GAP_EX:
+                fragment = new FillGapsFragment();
+                break;
+            case FILL_TEXT_WITH_WORDS_EX:
+                fragment = new FillTextWordsFragment();
+                break;
+            case RERANGE_EX:
+                fragment = new RerangeFragement();
+                break;
+
             default: fragment = new LessonFragment();
 
 

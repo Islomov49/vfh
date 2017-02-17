@@ -10,9 +10,9 @@ public class ExerciseTypes {
     public static final int UNDERLINE_EX = 1; //
     public static final int QUESTION_EX = 2; //
     public static final int PIC_PICK_EX = 3; //
-    public static final int COM_PIC_PICK_FILL_GAP_EX = 4;
-    public static final int FILL_GAP_EX = 5;
-    public static final int RERANGE_EX = 6;
+    public static final int COM_PIC_PICK_FILL_GAP_EX = 4; //
+    public static final int FILL_GAP_EX = 5; //
+    public static final int RERANGE_EX = 6; //
     public static final int TEST_EX = 7;
     public static final int PICT_PHOTO_EX = 8;
     public static final int WRITE_SENTENCES_EX = 9;
@@ -24,7 +24,7 @@ public class ExerciseTypes {
     public static final int JUMPED_KEY = 14;
     public static final int LISTENING_ANSWER_KEY = 15;
     public static final int FILL_TEXT_AUDIO_EX = 16;
-    public static final int FILL_TEXT_WITH_WORDS_EX = 17;
+    public static final int FILL_TEXT_WITH_WORDS_EX = 17; //
     public static final int TWO_DEFERENT_EX = 18;
     public static final int TRUE_FALSE_EX = 19;
 }

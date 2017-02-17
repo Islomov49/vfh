@@ -41,4 +41,15 @@ public class TextUtils {
         }
         textView.setText(ss);
     }
+    public static void ColorFillWordsForFillGaps(ArrayList<IntervalsTwoPair> intervalsTwoPairs, String text, TextView textView, Context context){
+        SpannableString ss = new SpannableString(text);
+        for (IntervalsTwoPair intervalsTwoPair:intervalsTwoPairs){
+            if(intervalsTwoPair.getWord().equals(""))
+                ss.setSpan(new BackgroundColorSpan(ContextCompat.getColor(context, R.color.seriy)), intervalsTwoPair.getStartPosition(), intervalsTwoPair.getEndPosition(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            else
+                ss.setSpan(new BackgroundColorSpan(ContextCompat.getColor(context, R.color.yellow)), intervalsTwoPair.getStartPosition(), intervalsTwoPair.getEndPosition(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+
+        textView.setText(ss);
+    }
 }

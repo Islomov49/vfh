@@ -86,7 +86,6 @@ public class ExerciseManager {
                 rewords.add("hacir");
                 rewords.add("kesd");
                 rewords.add("nasecnr");
-                rewords.add("trirpen");
                 exerciseRearrange.setRewords(rewords);
                 exercises.add(exerciseRearrange);
 
@@ -402,7 +401,7 @@ public class ExerciseManager {
                 gaps.add("To insert a tabulation, press the _______________.");
                 gaps.add("To activate the \"Ctrl\" functions, press the  _______________.");
                 gaps.add("To activate the \"alt\" functions, hit the _______________.");
-                gaps.add("To stop the computer doing something, you can press the__________");
+                gaps.add("To stop the computer doing something, you can press the __________");
                 gaps.add("Select the text you want to remove, and hit the  _______________.");
                 gaps.add("Please _______________ your password.");
                 gaps.add("It took me two hours to _______________ all that text.");
@@ -679,9 +678,9 @@ public class ExerciseManager {
 
                 ArrayList<String> gapss = new ArrayList<>();
                 gapss.add("Laptops are powered by batteries or ____________.");
-                gapss.add("Mains electricity is converted to lower voltage by a___________.");
+                gapss.add("Mains electricity is converted to lower voltage by a ___________.");
                 gapss.add("A _________ protects electronic equipment from damage caused by power ____________.");
-                gapss.add("If you remove the cover from a computer, make sure you________ the electricity___________. Otherwise, you may get an electric __________.");
+                gapss.add("If you remove the cover from a computer, make sure you ________ the electricity ___________. Otherwise, you may get an electric __________.");
                 exersiceWordsFillWrite.setGaps(gapss);
                 exercises.add(exersiceWordsFillWrite);
 
@@ -910,7 +909,7 @@ public class ExerciseManager {
                 ExerciseFillTextWords exerciseFillTextWords = new ExerciseFillTextWords("IV Exercise",
                         "Complete the gaps in the text below using the words from the box.",
                         ExerciseTypes.FILL_TEXT_WITH_WORDS_EX);
-                exerciseFillTextWords.setText("The \"brain\" of a computer is the 1_________. Most of these are made by Intel and AMD, and are sometimes referred to as \"2_________\". The fastest processors are 3_________, which means that there are two processors working together. The 4 __________ of a processor is measured in   5________, which is usually written as MHz. A computer's memory is measured in 6__________. If a computer has 1,024 megabytes of memory, this is written as 1,024 MB and is pronounced as thousand and twenty-four megabytes ess-dee-dram. The processor and memory modules are located on the 7__________. Changing a computer's processor is not generally practical, but memory can usually be 8___________.");
+                exerciseFillTextWords.setText("The \"brain\" of a computer is the _________. Most of these are made by Intel and AMD, and are sometimes referred to as \"_________\". The fastest processors are _________, which means that there are two processors working together. The  __________ of a processor is measured in   ________, which is usually written as MHz. A computer's memory is measured in _________. If a computer has 1,024 megabytes of memory, this is written as 1,024 MB and is pronounced as thousand and twenty-four megabytes ess-dee-dram. The processor and memory modules are located on the __________. Changing a computer's processor is not generally practical, but memory can usually be ___________.");
                 ArrayList<String> wordsss = new ArrayList<>();
                 wordsss.add("chips");
                 wordsss.add("motherboard");
@@ -1175,7 +1174,7 @@ public class ExerciseManager {
                 gapss2.add("Lift the lid and put the _____________ on the scanner glass.");
                 gapss2.add("For high image quality, scan ________ 300 _________ or higher.");
                 gapss2.add("The scanning software will automatically do a _____________.");
-                gapss2.add("If the image is too dark or too light, you can ______the _______ and __________.");
+                gapss2.add("If the image is too dark or too light, you can ______ the _______ and __________.");
                 gapss2.add("_____________ \"scan\".");
                 gapss2.add("If you scanned _____________, it can be \"read\" by __________.");
                 gapss2.add("If you want to save the image, choose a _____________. JPEG is a good choice for photos.");
@@ -1314,7 +1313,7 @@ public class ExerciseManager {
                 exersiceWordsFillWrite3.setWords(keywordss3);
 
                 ArrayList<String> gapss3 = new ArrayList<>();
-                gapss3.add("Digital cameras usually store pictures on a memory _____ or a memory____.");
+                gapss3.add("Digital cameras usually store pictures on a memory _____ or a memory ____.");
                 gapss3.add("To run this application you need at least 50MB of _______ on your hard drive. ");
                 gapss3.add("My computer's hard drive has a _______________ of 120GB.");
                 gapss3.add("I can't eject the CD. I think the _______'s stuck. ");
@@ -1340,7 +1339,7 @@ public class ExerciseManager {
                 exersiceWordsFillWrite33.setWords(keywordss2233);
 
                 ArrayList<String> gapss44 = new ArrayList<>();
-                gapss44.add("Digital cameras usually store pictures on a memory _____ or a memory____.");
+                gapss44.add("Digital cameras usually store pictures on a memory _____ or a memory ____.");
                 gapss44.add("To run this application you need at least 50MB of _______ on your hard drive.");
                 gapss44.add("My computer's hard drive has a _______________ of 120GB. ");
                 gapss44.add("I can't eject the CD. I think the _______'s stuck. ");

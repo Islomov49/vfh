@@ -36,17 +36,24 @@
             android:textColor="@color/glavniy_black"
             android:text="electronic machines, to accept, data, to process, to feed, memory, to calculate, screen, to perform,  output, capable, storing, to print, device, program,  to serve, logical, operations, forecast, , to solve,  to contain, capacity."
             android:textStyle="italic" />
-    <ImageView
-        android:id="@+id/ivPicture"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
 
-        android:layout_marginBottom="25dp"
-        android:src="@drawable/les1_3"/>
+        <TextView
+            android:id="@+id/fillText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_margin="16dp"
+            android:textColor="@color/glavniy_black"/>
+        <ImageView
+            android:id="@+id/ivPicture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/les1_3"/>
         <LinearLayout
             android:id="@+id/firstBlock"
             android:layout_width="match_parent"
