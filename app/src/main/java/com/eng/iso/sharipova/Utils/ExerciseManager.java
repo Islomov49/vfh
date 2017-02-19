@@ -124,7 +124,7 @@ public class ExerciseManager {
                         "Listen to the text, look at the picture and match the description of the various hardware components of a desktop computer",
                         ExerciseTypes.PICT_PHOTO_EX);
                 exerciseListenPictureMatch.setPhotoName("les1_6");
-                exerciseListenPictureMatch.setAudioName("les1_6");
+                exerciseListenPictureMatch.setAudioName("les1");
                 exerciseListenPictureMatch.setCountWords(10);
                 exercises.add(exerciseListenPictureMatch);
 
@@ -242,7 +242,7 @@ public class ExerciseManager {
                 secondCol.add("the battery");
                 secondCol.add("the mouse");
                 secondCol.add("twenty pages");
-                exerciseMatchWords.setFirstCollumb(secondCol);
+                exerciseMatchWords.setSecondCollumb(secondCol);
                 exercises.add(exerciseMatchWords);
 
                 //5
@@ -252,7 +252,7 @@ public class ExerciseManager {
                 exerciseAdvantagesDisadvantegs.setAdvantageTitle("Advantages of Computers:");
                 exerciseAdvantagesDisadvantegs.setAdvantageText("It can ___. any repetitive work and ___. rapidly and accurately. Computers can ___. large amount of ___ and information for subsequent manipulation. The memory of computer can hold ___. which can be explored in different ways. Computers can make decision based on different conditions. It can ___. information to the ___. ");
                 exerciseAdvantagesDisadvantegs.setDisadvantageTitle("Disadvantages of computers:");
-                exerciseAdvantagesDisadvantegs.setDisadvantageText("A computer has no___. or___. of its own. It cannot learn with experience. It can only___. operations as instructed by the user. It has no..___. due to which it can carry out the___. only as long as user needs. It can understand instructions no matter whether they are right or wrong. ");
+                exerciseAdvantagesDisadvantegs.setDisadvantageText("A computer has no ___. or ___. of its own. It cannot learn with experience. It can only ___. operations as instructed by the user. It has no.. ___. due to which it can carry out the ___. only as long as user needs. It can understand instructions no matter whether they are right or wrong. ");
                 ArrayList<String> advanWords = new ArrayList<>();
                 advanWords.add("User");
                 advanWords.add("perform");
@@ -314,7 +314,7 @@ public class ExerciseManager {
                 exercises.add(exerciseTest1);
 
                 //8
-                ExerciseSynonyms exerciseSynonyms1 = new ExerciseSynonyms("VI Exercise",
+                ExerciseSynonyms exerciseSynonyms1 = new ExerciseSynonyms("VIII Exercise",
                         "Give the definition or try to find the synonyms of the following words and word combinations",
                         ExerciseTypes.SYNONYMS_EX);
                 ArrayList<String> synonyms3 = new ArrayList<>();
@@ -429,7 +429,7 @@ public class ExerciseManager {
                 keywordss.add("PgDn (Page Down)");
                 keywordss.add("Alt (Alternate)");
                 exerciseListenTextMatchKey.setKeyWords(keywordss);
-                exerciseListenTextMatchKey.setAudioName("les3_4");
+                exerciseListenTextMatchKey.setAudioName("les3");
                 ArrayList<String> texts = new ArrayList<>();
                 texts.add("This key is used to send the cursor to the beginning of the next line (for instance when typing text in a word processing package). It is also used to finish a command to tell the computer to execute the command just typed. There are usually two of these keys.");
                 texts.add("Used to delete one character at a time to the left of the cursor. You can also click and drag to highlight text and then press this key to delete text.");
@@ -445,11 +445,11 @@ public class ExerciseManager {
                 exercises.add(exerciseListenTextMatchKey);
 
                 //5
-                ExerciseTest4x exerciseTest2= new ExerciseTest4x("V Exercise",
+                ExerciseTest exerciseTest2= new ExerciseTest("V Exercise",
                         "Choose the right answer",
                         ExerciseTypes.TEST_EX);
                 ArrayList<String> testQuestions2 = new ArrayList<>();
-                ArrayList<TestVariant4x> testVariants2 = new ArrayList<>();
+                ArrayList<TestVariant> testVariants2 = new ArrayList<>();
                 testQuestions2.add("Which part is the \"brain\" of the computer?");
                 testVariants2.add(new TestVariant4x("Monitor","RAM","CPU","ROM"));
                 testQuestions2.add("What is the permanent memory built into your computer called?");
@@ -588,7 +588,7 @@ public class ExerciseManager {
 
                 //5
                 ExerciseListenCheckUpAnswers exerciseListenCheckUpAnswers = new ExerciseListenCheckUpAnswers("V Exercise",
-                        "Listen and check up your answers.",ExerciseTypes.LISTENING_ANSWER_KEY, "les4_5");
+                        "Listen and check up your answers.",ExerciseTypes.LISTENING_ANSWER_KEY, "les4");
                 exercises.add(exerciseListenCheckUpAnswers);
 
                 //6
@@ -822,7 +822,7 @@ public class ExerciseManager {
 
                 //5
                 ExerciseListenCheckUpAnswers exerciseListenCheckUpAnswers2 = new ExerciseListenCheckUpAnswers("V Exercise",
-                        "Listen and check up your answers.",ExerciseTypes.LISTENING_ANSWER_KEY, "les6_5");
+                        "Listen and check up your answers.",ExerciseTypes.LISTENING_ANSWER_KEY, "les6");
                 exercises.add(exerciseListenCheckUpAnswers2);
 
                 //6
@@ -923,7 +923,7 @@ public class ExerciseManager {
                 exercises.add(exerciseFillTextWords);
                 //5
                 ExerciseListenCheckUpAnswers exerciseListenCheckUpAnswers3 = new ExerciseListenCheckUpAnswers("V Exercise",
-                        "Listen and check up your answers.",ExerciseTypes.LISTENING_ANSWER_KEY, "les7_5");
+                        "Listen and check up your answers.",ExerciseTypes.LISTENING_ANSWER_KEY, "les7");
                 exercises.add(exerciseListenCheckUpAnswers3);
 
                 //6
@@ -1323,33 +1323,6 @@ public class ExerciseManager {
                 exersiceWordsFillWrite3.setGaps(gapss3);
                 exercises.add(exersiceWordsFillWrite3);
 
-                //3
-                ExerciseWordsFillWrite exersiceWordsFillWrite33 = new ExerciseWordsFillWrite("III Exercise",
-                        "Complete the gaps in the text below using the words from the box.",
-                        ExerciseTypes.FILL_GAP_EX);
-                ArrayList<String> keywordss2233 = new ArrayList<>();
-                keywordss2233.add("burn");
-                keywordss2233.add("eject");
-                keywordss2233.add("capacity");
-                keywordss2233.add("free space");
-                keywordss2233.add("card");
-                keywordss2233.add("hard drive");
-                keywordss2233.add("drawer");
-                keywordss2233.add("stick");
-                exersiceWordsFillWrite33.setWords(keywordss2233);
-
-                ArrayList<String> gapss44 = new ArrayList<>();
-                gapss44.add("Digital cameras usually store pictures on a memory _____ or a memory ____.");
-                gapss44.add("To run this application you need at least 50MB of _______ on your hard drive.");
-                gapss44.add("My computer's hard drive has a _______________ of 120GB. ");
-                gapss44.add("I can't eject the CD. I think the _______'s stuck. ");
-                gapss44.add("The opposite of \"Insert the DVD\" is \"_______________ the DVD\".");
-                gapss44.add("Do you like this CD? I can _______ you a copy if you want.");
-                gapss44.add("The data and applications on your computer are stored on the _________");
-                exersiceWordsFillWrite33.setGaps(gapss44);
-                exercises.add(exersiceWordsFillWrite33);
-
-
                 //4
                 ExerciseTest exerciseTest4= new ExerciseTest("IV Exercise",
                         "Choose the correct letter a, b, c",
@@ -1395,7 +1368,7 @@ public class ExerciseManager {
                 exercises.add(exerciseFillTextWords2);
                 //6
                 ExerciseListenCheckUpAnswers exerciseListenCheckUpAnswers4 = new ExerciseListenCheckUpAnswers("VI Exercise",
-                        "Listen and check up your answers.",ExerciseTypes.LISTENING_ANSWER_KEY, "les10_5");
+                        "Listen and check up your answers.",ExerciseTypes.LISTENING_ANSWER_KEY, "les10");
                 exercises.add(exerciseListenCheckUpAnswers4);
 
                 //7
@@ -1466,11 +1439,11 @@ public class ExerciseManager {
 
 
                 //3
-                ExerciseTest4x exerciseTest4x= new ExerciseTest4x("III Exercise",
+                ExerciseTest exerciseTest4x= new ExerciseTest("III Exercise",
                         "Choose the right answer",
                         ExerciseTypes.TEST_EX);
                 ArrayList<String> testQuestionss3 = new ArrayList<>();
-                ArrayList<TestVariant4x> testVariants5 = new ArrayList<>();
+                ArrayList<TestVariant> testVariants5 = new ArrayList<>();
                 testQuestionss3.add("Which of the following is an operating system you would be using on the computer?");
                 testVariants5.add(new TestVariant4x("Internet Explorer","Microsoft Windows","Netscape","Microsoft Word"));
                 testQuestionss3.add("Which of these is a not a computer manufacturer?");
@@ -1540,7 +1513,7 @@ public class ExerciseManager {
                 secondCol2.add("Put them on a CD-RW.");
                 secondCol2.add("Perhaps you need to defragment the hard drive.");
                 secondCol2.add("You could put it on a floppy disk.");
-                exerciseMatchWords2.setFirstCollumb(secondCol2);
+                exerciseMatchWords2.setSecondCollumb(secondCol2);
                 exercises.add(exerciseMatchWords2);
 
                 //7
@@ -1630,13 +1603,13 @@ public class ExerciseManager {
 
                 //5
                 ExerciseListenCheckUpAnswers exerciseListenCheckUpAnswersss = new ExerciseListenCheckUpAnswers("V Exercise",
-                        "Listen and check up your answers.",ExerciseTypes.LISTENING_ANSWER_KEY, "les12_5");
+                        "Listen and check up your answers.",ExerciseTypes.LISTENING_ANSWER_KEY, "les12");
                 exercises.add(exerciseListenCheckUpAnswersss);
 
                 //6
                 ExerciseWriteSentencesText exerciseWriteSenrences32 = new ExerciseWriteSentencesText("VI Exercise",
                         "Read the text and write a summary.",
-                        ExerciseTypes.WRITE_SENTENCES_EX);
+                        ExerciseTypes.WRITE_SENTENCES_TEXT_EX);
                 exerciseWriteSenrences32.setText("A Wireless Access Point (WAP) is a device that connects to a wired network and creates a wireless network that can access the wired network. A wireless router will contain a WAP - think of a WAP as the radio portion of a wireless router broken out into a separate device. \n" +
                         "You would use a WAP if you have a wired network and want to add one or more wireless clients. These wireless clients may be too far away from your existing cabling. \n" +
                         "WAPs are not as popular as they once were. Wireless routers have dropped in price so much that it can be more economical to replace a wired router with a wireless router and use the wireless router's wired ports to handle the wired portion of the network.\n");

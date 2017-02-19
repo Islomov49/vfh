@@ -5,7 +5,7 @@ package com.eng.iso.sharipova.Entity;
  */
 
 public class ExerciseVocabulOwn extends Exercise {
-    String photoName;
+    String photoName = "";
     public ExerciseVocabulOwn(String exNumber, String condition, int type) {
         super(exNumber, condition, type);
     }

@@ -28,7 +28,6 @@ public class PickPicFragment extends Fragment {
     int idLinearView [] = {R.id.firstBlock,R.id.secondBlock,R.id.thirtBlock,R.id.fourBlock,R.id.fiveBlock,R.id.sixBlock,R.id.sevenBlock,R.id.eightBlock,R.id.nineBlock,R.id.tenBlock,R.id.elevenBlock,R.id.twelveBlock,R.id.thirteenBlock,R.id.fourteenBlock,R.id.fiveteenBlock};
     int idTextView [] = {R.id.firstTv,R.id.secondTv,R.id.thirtTv,R.id.fourTv,R.id.fiveTv,R.id.sixTv,R.id.sevenTv,R.id.eightTv,R.id.nineTv,R.id.tenTv,R.id.elevenTv,R.id.twelveTv,R.id.thirteenTv,R.id.fourteenTv,R.id.fiveteenTv};
     int idSpinnerView [] = {R.id.firstSp,R.id.secondSp,R.id.thirtSp,R.id.fourSp,R.id.fiveSp,R.id.sixSp,R.id.sevenSp,R.id.eightSp,R.id.nineSp,R.id.tenSp,R.id.elevenSp,R.id.twelveSp,R.id.thirteenSp,R.id.fourteenSp,R.id.fiveteenSp};
-    int countSpinner[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}; //a,b,c,d,e,f,g,h,i,k,l,m,n,o,p;
     String alphabet [] = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"};
 
     ArrayList<Exercise> exercises;

@@ -13,13 +13,24 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.eng.iso.sharipova.Entity.Exercise;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.AdwantageDisadvantageFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.ComWordsFillWriteFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.EmptyFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.FillGapsFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.FillTextWordsFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.ListenAndMatchFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.ListeningAnswerFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.MatchWordsFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.PickPhotoFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.PickPicFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.QuestionAnswerFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.RerangeFragement;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.SynonimFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.TestFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.UnderlineExerciseFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.VocOwnFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.WriteSentenceFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.WriteSentenceTextFragment;
 import com.eng.iso.sharipova.R;
 import com.eng.iso.sharipova.Utils.ExerciseManager;
 import com.eng.iso.sharipova.Utils.ExerciseTypes;
@@ -157,8 +168,37 @@ public class ExerciseTabLayout extends Fragment implements View.OnClickListener,
             case RERANGE_EX:
                 fragment = new RerangeFragement();
                 break;
-
-            default: fragment = new LessonFragment();
+            case WRITE_SENTENCES_EX:
+                fragment = new WriteSentenceFragment();
+                break;
+            case SYNONYMS_EX:
+                fragment = new SynonimFragment();
+                break;
+            case WRITE_SENTENCES_TEXT_EX:
+                fragment = new WriteSentenceTextFragment();
+                break;
+            case VOC_OWN_EX:
+                fragment = new VocOwnFragment();
+                break;
+            case LISTENING_ANSWER_KEY:
+                fragment = new ListeningAnswerFragment();
+                break;
+            case TEST_EX:
+                fragment = new TestFragment();
+                break;
+            case PICT_PHOTO_EX:
+                fragment = new PickPhotoFragment();
+                break;
+            case MATCH_WORDS_EX:
+                fragment = new MatchWordsFragment();
+                break;
+            case ADVANTAGE_DISADVANTAGE_AUDIO_FILL_EX:
+                fragment = new AdwantageDisadvantageFragment();
+                break;
+            case LISTEN_TEXT_MATCH_KEY:
+                fragment = new ListenAndMatchFragment();
+                break;
+            default: fragment = new EmptyFragment();
 
 
 

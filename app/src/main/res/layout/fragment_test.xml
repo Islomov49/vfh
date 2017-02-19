@@ -2,12 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.eng.iso.sharipova.Fragments.ExerciseFragments.ComWordsFillWriteFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.eng.iso.sharipova.Fragments.ExerciseFragments.SynonimFragment">
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none"
+
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,25 +26,17 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:textStyle="bold"/>
-            <TextView
-                android:id="@+id/textView"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycSynonimic"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:paddingBottom="10dp"
-                android:textSize="14dp"
-                android:textColor="@color/glavniy_black"
-                android:text="electronic machines, to accept, data, to process, to feed, memory, to calculate, screen, to perform,  output, capable, storing, to print, device, program,  to serve, logical, operations, forecast, , to solve,  to contain, capacity."
-                android:textStyle="italic" />
-            <TextView
-                android:id="@+id/fillText"
+                android:paddingTop="10dp"
+                android:clipToPadding="false"/>
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:layout_margin="16dp"
-                android:textColor="@color/glavniy_black"/>
-
+                android:layout_height="20dp"/>
         </LinearLayout>
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
+
 </FrameLayout>

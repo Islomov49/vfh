@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/firstQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan the text below and click these words and word combinations."
+        android:textSize="14dp"
+        android:textColor="@color/glavniy_black"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        />
+    <RadioGroup
+        android:id="@+id/rgAnswers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+        <RadioButton
+            android:id="@+id/aans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First answer"
+            android:textColor="@color/glavniy_black"/>
+        <RadioButton
+            android:id="@+id/bans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First answer"
+            android:textColor="@color/glavniy_black"/>
+        <RadioButton
+            android:id="@+id/cans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First answer"
+            android:textColor="@color/glavniy_black"/>
+        <RadioButton
+            android:id="@+id/dans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First answer"
+            android:textColor="@color/glavniy_black"/>
+    </RadioGroup>
+</LinearLayout>
