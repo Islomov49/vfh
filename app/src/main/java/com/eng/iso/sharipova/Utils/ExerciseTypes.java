@@ -24,8 +24,8 @@ public class ExerciseTypes {
     public static final int MATCH_WORDS_EX = 12; //
     public static final int ADVANTAGE_DISADVANTAGE_AUDIO_FILL_EX = 21; //
     public static final int LISTEN_TEXT_MATCH_KEY = 13; //
-    public static final int JUMPED_KEY = 14;
-    public static final int FILL_TEXT_AUDIO_EX = 16;
-    public static final int TWO_DEFERENT_EX = 18;
-    public static final int TRUE_FALSE_EX = 19;
+    public static final int JUMPED_KEY = 14;  //
+    public static final int FILL_TEXT_AUDIO_EX = 16; //
+    public static final int TWO_DEFERENT_EX = 18; //
+    public static final int TRUE_FALSE_EX = 19; //
 }

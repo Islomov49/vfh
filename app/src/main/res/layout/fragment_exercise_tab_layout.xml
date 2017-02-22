@@ -11,16 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/lienee"
         android:background="@android:color/white" />
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fbDebtBorrowFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_margin="16dp"
-        android:src="@drawable/next"
-        app:fab_colorNormal="@color/colorAccent"
-        />
+
     <android.support.design.widget.TabLayout
         android:id="@+id/sliding_tabs"
         android:layout_width="match_parent"

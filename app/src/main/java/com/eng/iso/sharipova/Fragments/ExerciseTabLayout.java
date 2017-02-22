@@ -17,7 +17,9 @@ import com.eng.iso.sharipova.Fragments.ExerciseFragments.AdwantageDisadvantageFr
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.ComWordsFillWriteFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.EmptyFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.FillGapsFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.FillTextWordsAudioFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.FillTextWordsFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.JumpedKeyFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.ListenAndMatchFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.ListeningAnswerFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.MatchWordsFragment;
@@ -27,6 +29,8 @@ import com.eng.iso.sharipova.Fragments.ExerciseFragments.QuestionAnswerFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.RerangeFragement;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.SynonimFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.TestFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.TrueFalseFragment;
+import com.eng.iso.sharipova.Fragments.ExerciseFragments.TwoDeferentsFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.UnderlineExerciseFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.VocOwnFragment;
 import com.eng.iso.sharipova.Fragments.ExerciseFragments.WriteSentenceFragment;
@@ -44,7 +48,6 @@ public class ExerciseTabLayout extends Fragment implements View.OnClickListener,
     private ViewPager viewPager;
     private PagerAdapter adapter;
     private TabLayout tabLayout;
-    private FloatingActionButton fb;
     private ArrayList<Fragment> list;
     int countCurrent = 0;
     int lessonNumber = 0;
@@ -68,14 +71,6 @@ public class ExerciseTabLayout extends Fragment implements View.OnClickListener,
         }
 
         tabLayout = (TabLayout) view.findViewById(R.id.sliding_tabs);
-        fb = (FloatingActionButton) view.findViewById(R.id.fbDebtBorrowFragment);
-        fb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(viewPager.getCurrentItem()!=list.size())
-                viewPager.setCurrentItem(viewPager.getCurrentItem()+1,true);
-            }
-        });
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         list = new ArrayList<>();
 
@@ -108,6 +103,19 @@ public class ExerciseTabLayout extends Fragment implements View.OnClickListener,
         });
 
         tabLayout.setupWithViewPager(viewPager);
+        tabLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                tabLayout.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        tabLayout.getTabAt(countCurrent).select();
+
+                    }
+                });
+            }
+        });
+
         return  view;
     }
 
@@ -137,6 +145,7 @@ public class ExerciseTabLayout extends Fragment implements View.OnClickListener,
     public void onPageScrollStateChanged(int state) {
 
     }
+    boolean show = false;
 
     @Override
     public void onClick(View v) {
@@ -197,6 +206,18 @@ public class ExerciseTabLayout extends Fragment implements View.OnClickListener,
                 break;
             case LISTEN_TEXT_MATCH_KEY:
                 fragment = new ListenAndMatchFragment();
+                break;
+            case JUMPED_KEY:
+                fragment = new JumpedKeyFragment();
+                break;
+            case FILL_TEXT_AUDIO_EX:
+                fragment = new FillTextWordsAudioFragment();
+                break;
+            case TWO_DEFERENT_EX:
+                fragment = new TwoDeferentsFragment();
+                break;
+            case TRUE_FALSE_EX:
+                fragment = new TrueFalseFragment();
                 break;
             default: fragment = new EmptyFragment();
 

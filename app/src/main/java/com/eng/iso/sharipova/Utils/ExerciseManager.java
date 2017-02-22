@@ -577,12 +577,11 @@ public class ExerciseManager {
                         "Put the jumbled part of the sentences in the right order.",
                         ExerciseTypes.JUMPED_KEY);
                 ArrayList<String> jumpleds= new ArrayList<>();
-                jumpleds.add("The, very, issues, also, to, the, computer, instructionsmouse, quickly");
-                jumpleds.add("A, held, an, object, of, one, of, the, user's, under, mouse, consists, hands");
-                jumpleds.add("a, common, does, computer, features, mouse, have, What,?");
-                jumpleds.add("typically, a, display, cursor, The , motion, of, the, motion, a, on, mouse's, into, translates");
+                jumpleds.add("The, very, issues, also, to, the, computer, instructionsmouse, quickly,");
+                jumpleds.add("A, held, an, object, of, one, of, the, user's, under, mouse, consists, hands,");
+                jumpleds.add("a, common, does, computer, features, mouse, have, What,?,");
+                jumpleds.add("typically, a, display, cursor, The , motion, of, the, motion, a, on, mouse's, into, translates,");
                 jumpleds.add("be, notebook, of, represented, A, text, might, by, a, picture, a, file,");
-                jumpleds.add("is, mouse, What, computing, device, a, inkind, of, ?");
                 exerciseJumpled.setJumpleds(jumpleds);
                 exercises.add(exerciseJumpled);
 
@@ -712,9 +711,9 @@ public class ExerciseManager {
                 keywordss22.add("components");
                 keywordss22.add("memory");
                 exersiceWordsFillWrite11.setWords(keywordss22);
-                exersiceWordsFillWrite11.setText("Once you open up a ........, it can initially be difficult to recognize the........, especially all the different wires. However,  you look closely, you will probably start to recognize a number of .......... \n" +
-                        "In this particular example, the motherboard is placed......, which is quite common. One side of the........ is accessible from the back of the computer case - this includes the various connectors for input and output devices as well as expansion slots for additional peripherals. The motherboard also contains the central processing unit (CPU), although it can be difficult to see. A large fan is often placed on top of the CPU to avoid overheating. The motherboard also contains the main ....... of the computer.");
-                exersiceWordsFillWrite11.setAudioName("les5_5");
+                exersiceWordsFillWrite11.setText("Once you open up a ______, it can initially be difficult to recognize the ______, especially all the different wires. However,  you look closely, you will probably start to recognize a number of ______ \n" +
+                        "In this particular example, the motherboard is placed ______, which is quite common. One side of the ______ is accessible from the back of the computer case - this includes the various connectors for input and output devices as well as expansion slots for additional peripherals. The motherboard also contains the central processing unit (CPU), although it can be difficult to see. A large fan is often placed on top of the CPU to avoid overheating. The motherboard also contains the main ______ of the computer.");
+                exersiceWordsFillWrite11.setAudioName("les5");
                 exercises.add(exersiceWordsFillWrite11);
                 //6
                 ExerciseWriteSenrences exerciseWriteSenrences2 = new ExerciseWriteSenrences("VI Exercise",
@@ -812,11 +811,11 @@ public class ExerciseManager {
                         "Put the jumbled part of the sentences in the right order.",
                         ExerciseTypes.JUMPED_KEY);
                 ArrayList<String> jumpleds1= new ArrayList<>();
-                jumpleds1.add("contains, of, sockets, and, to, connect, the, a, motherboard,   a number, other, components, slots");
-                jumpleds1.add("connects, central, and,  subsystems, and, A motherboard, processing, hosts, unit, other, devices, the");
-                jumpleds1.add("components, does, typical, What, desktop, computer, have,?");
-                jumpleds1.add("important, of, a, the,  microprocessor's, component, chipset, An, supporting, motherboard, is");
-                jumpleds1.add("size, and, factor, shape, of, computer, the, case, is determined, a, by, form, of, motherboard, The, usually, the");
+                jumpleds1.add("contains, of, sockets, and, to, connect, the, a, motherboard,   a number, other, components, slots,");
+                jumpleds1.add("connects, central, and,  subsystems, and, A motherboard, processing, hosts, unit, other, devices, the,");
+                jumpleds1.add("components, does, typical, What, desktop, computer, have,?,");
+                jumpleds1.add("important, of, a, the,  microprocessor's, component, chipset, An, supporting, motherboard, is,");
+                jumpleds1.add("size, and, factor, shape, of, computer, the, case, is determined, a, by, form, of, motherboard, The, usually, the,");
                 exerciseJumpled1.setJumpleds(jumpleds1);
                 exercises.add(exerciseJumpled1);
 
@@ -1059,9 +1058,9 @@ public class ExerciseManager {
                 keywordss223.add("Ink-jet printers");
                 exersiceWordsFillWrite12.setWords(keywordss223);
                 exersiceWordsFillWrite12.setText("It is an important output device which can be used to get a printed copy of the processed text or result on paper. There are different types of printers that are designed for different types of applications. " +
-                        "Depending on their speed and approach of printing, printers are classified as.........  or ...........printers. Impact printers use the familiar typewriter approach of hammering of a typeface against paper and inked ribbon. ............are of this type. Non-impact printers do not hit or impact a ribbon to print. They use ...........and............. . " +
-                        "............and............ are of this type. This type of printers can produce........ and ..............");
-                exersiceWordsFillWrite12.setAudioName("les8_5");
+                        "Depending on their speed and approach of printing, printers are classified as ______  or ______ printers. Impact printers use the familiar typewriter approach of hammering of a typeface against paper and inked ribbon. ______ are of this type. Non-impact printers do not hit or impact a ribbon to print. They use ______ and ______ . " +
+                        "______ and ______ are of this type. This type of printers can produce ______ and ______");
+                exersiceWordsFillWrite12.setAudioName("les8");
                 exercises.add(exersiceWordsFillWrite12);
 
                 //6
@@ -1468,15 +1467,21 @@ public class ExerciseManager {
                         "Fill in the blanks using the words and word combinations which are given in the box. Listen to the text and check up your answers.",
                         ExerciseTypes.FILL_TEXT_AUDIO_EX);
                 ArrayList<String> keywordss222 = new ArrayList<>();
-                keywordss222.add("device/equipment");
-                keywordss222.add("check/control");
-                keywordss222.add("decode/interpret");
-                keywordss222.add("computers /microcomputers");
-                keywordss222.add("mechanical/ automatic");
-                keywordss222.add("automobiles/cars");
+                keywordss222.add("device");
+                keywordss222.add("equipment");
+                keywordss222.add("control");
+                keywordss222.add("check");
+                keywordss222.add("decode");
+                keywordss222.add("interpret");
+                keywordss222.add("computers ");
+                keywordss222.add("microcomputers");
+                keywordss222.add("mechanical");
+                keywordss222.add("automatic");
+                keywordss222.add("automobiles");
+                keywordss222.add("cars");
                 exersiceWordsFillWrite111.setWords(keywordss222);
-                exersiceWordsFillWrite111.setText("Miniature electronic ....... that con-tains the arithmetic, logic, and ……. circuitry needed to function as a digital computer's CPU. Micro-processors are integrated circuits that can ……. and execute program instructions as well as handle arithmetic operations. Their development in the late 1970s enabled computer engineers to develop…….. Microprocessors led to “intelligent” terminals, such as bank ATMs and point-of-sale devices, and to……. control of much industrial instrumentation and hospital equipment, programmable microwave oven and electronic games. Many …….use microprocessor-controlled ignition and fuel systems.");
-                exersiceWordsFillWrite111.setAudioName("les10_4");
+                exersiceWordsFillWrite111.setText("Miniature electronic _____ that con-tains the arithmetic, logic, and _____. circuitry needed to function as a digital computer's CPU. Micro-processors are integrated circuits that can _____. and execute program instructions as well as handle arithmetic operations. Their development in the late 1970s enabled computer engineers to develop _____. Microprocessors led to “intelligent” terminals, such as bank ATMs and point-of-sale devices, and to _____. control of much industrial instrumentation and hospital equipment, programmable microwave oven and electronic games. Many _____ use microprocessor-controlled ignition and fuel systems.");
+                exersiceWordsFillWrite111.setAudioName("les10");
                 exercises.add(exersiceWordsFillWrite111);
 
                 //5
@@ -1595,7 +1600,7 @@ public class ExerciseManager {
                 ArrayList<String> jumpleds12= new ArrayList<>();
                 jumpleds12.add("of, analog, can, over, Modems, signals, be, used, any, means, transmitting,");
                 jumpleds12.add("by, can, demodulated, Signals, over, telephone, lines, and, be, another, transmitted,");
-                jumpleds12.add("decoding, transmitted, What, is, goal, of, the, information, the,?");
+                jumpleds12.add("decoding, transmitted, What, is, goal, of, the, information, the,?,");
                 jumpleds12.add("by, classified, band, Modems, also, be, the, rate, measured, in, can, symbol,");
                 jumpleds12.add("the, SW0,To, must, the, modem, you, reset, by, pressing, operate, modem,");
                 exerciseJumpled22.setJumpleds(jumpleds12);

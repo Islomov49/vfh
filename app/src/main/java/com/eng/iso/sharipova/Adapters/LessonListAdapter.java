@@ -34,7 +34,7 @@ public class LessonListAdapter extends RecyclerView.Adapter<LessonListAdapter.Vi
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lesson_adapter, parent, false);
         return new ViewHolder(view);
     }
-
+    boolean keyPresed = false;
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         Lesson lesson = lessons.get(position);
@@ -43,9 +43,14 @@ public class LessonListAdapter extends RecyclerView.Adapter<LessonListAdapter.Vi
         holder.mainView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(keyPresed)
+                    return;
+                keyPresed = true;
                 AnimUtil.buttonClickCustomAnimation(0.98f,holder.mainView, new AnimUtil.AfterAnimationEnd() {
+
                     @Override
                     public void onAnimoationEnd() {
+                        keyPresed = false;
                         ExersiceFragment fragment = new ExersiceFragment();
                         Bundle bundle =new Bundle();
                         bundle.putInt(ExerciseTypes.LESSON_NUMBER,position);
